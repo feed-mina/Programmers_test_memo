@@ -25,7 +25,9 @@ num1	num2	result
  class Solution {
     public int solution(int num1, int num2) {
      double result = num1 / num2;
-      int answer = (int) Math.floor(result);
+    // int answer = (int) (result * 1000);
+// double answer = result * 1000;
+
         return answer;
     }
 }
