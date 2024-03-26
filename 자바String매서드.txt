@@ -12,6 +12,12 @@ indexOf( ) 메소드는 if문의 조건식에서 특정 문자열이 포함되�
  여부에 따라 실행 코드를 달리할 때 자주 사용됩니다. 
  -1 값을 리턴하면 특정 문자열이 포함되어 있지 않다는 뜻입니다.
 
+split() : 문자열을 잘라서 배열로 반환하는 메서드, 파라미터로 자를때 기준이 되는 문자열을 입력받는다.
+String str = "Hello Java";
+String[] arr = arr.split("");
+System.out.println(Arrays.toString(arr));
+// 출력 결과 : [H, e, l, l, o,  , J, a, v, a]
+
 
 substring(int beginIndex) : beginIdex 위치에서 끝까지 
 잘라낸 새로운 문자열을 리턴
