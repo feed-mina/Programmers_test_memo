@@ -1,5 +1,16 @@
+import java.util.*;
 public class 짝수는싫어요 {
-    
+    public ArrayList solution(int n) {
+        ArrayList<Integer> answer = new ArrayList<Integer>();
+
+        for(int i=1; i<=n; i++){
+          if(i%2 != 0) {
+              answer.add(i);
+          } 
+        }
+
+        return answer;
+    }
 }
 
 /**
@@ -8,9 +19,7 @@ public class 짝수는싫어요 {
  * 
  * 제한사항
 1 ≤ n ≤ 100
- * 
-"my_string"은 영어 대소문자로 이루어져 있습니다.
-
+  
 입출력 예
 n	result
 10	[1, 3, 5, 7, 9]
@@ -27,5 +36,29 @@ n	result
  */
 
  /*
-  * 
+다른사람 문제풀이1
+import java.util.stream.IntStream;
+
+class Solution {
+    public int[] solution(int n) {
+        return IntStream.rangeClosed(0, n).filter(value -> value % 2 == 1).toArray();
+    }
+}
+
+
+다른사람 문제풀이2
+import java.util.List;
+import java.util.ArrayList;
+
+class Solution {
+    public int[] solution(int n) {
+        List<Integer> answer = new ArrayList<>();
+        for(int i=1; i<=n; i++){
+            if(i % 2 == 1){
+                answer.add(i);
+            }
+        }
+        return answer.stream().mapToInt(x -> x).toArray();
+    }
+}
   */

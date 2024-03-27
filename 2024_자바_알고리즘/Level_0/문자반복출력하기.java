@@ -77,16 +77,7 @@ class Solution {
     }
 }
 다른사람 문제풀이2
-
-2
-3
-4
-5
-6
-7
-8
-9
-10
+ 
 class Solution {
     public String solution(String my_string, int n) {
         StringBuilder sb = new StringBuilder();
