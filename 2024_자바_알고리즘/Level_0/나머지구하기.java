@@ -11,9 +11,14 @@ num1	num2	result
 20      6         2  
  */
 /** 
-20 = 6 * 3 + result(2)
-10 = 5 * 2 + result (0)
- 3 = 1 *2 + result  (1)
-
- */  
-
+ 다른사람 문제풀이1
+ class Solution {
+    public int solution(int num1, int num2) {
+        while (num1 >= num2) {
+            num1 = num1 - num2;
+        }
+        int answer = num1;
+        return answer;
+    }
+}
+ */
