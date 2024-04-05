@@ -1,5 +1,17 @@
+
+import java.util.ArrayList;
+import java.util.List;
 public class 정수찾기 {
-    
+ 
+    public int solution(int[] num_list, int n) { 
+        int answer = 0;
+  for(int i = 0; i <num_list.length; i++){
+    if(num_list[i] == n ){
+       answer ++;
+    }
+  }
+        return answer;
+ }   
 }
 
 
@@ -28,9 +40,34 @@ num_list	        n	    result
  */
 
  /*
-  * 
-  for(int i = 0; i <num_list.length; i++){
-    if(num_list[i] == n )
-  }
+  *  다른사람문제풀이1
+  import java.util.stream.IntStream;
 
+class Solution {
+    public int solution(int[] numList, int n) {
+        return IntStream.of(numList).anyMatch(num -> num == n) ? 1 : 0;
+    }
+}
+
+
+다른사람문제풀이2
+class Solution {
+    public int solution(int[] num_list, int n) {
+        for (int num : num_list)
+            if (num == n)
+                return 1;
+        return 0;
+    }
+}
+
+다른사람문제풀이3
+class Solution {
+    public int solution(int[] num_list, int n) {
+        int answer = 0;
+        for(int i = 0;i<num_list.length;i++){
+            if(num_list[i]==n)return 1;
+        }
+        return answer;
+    }
+}
   */
