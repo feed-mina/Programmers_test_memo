@@ -46,5 +46,37 @@ int num = Integer.parseInt(str);
 ```java 
 			
 ```
+#### Math.random()
+해당 함수는 0.0이상 1.0미만의 난수를 반환한다
+#### Math.pow(n,m)
+해당 함수는 n의 m제곱근 값을 반환한다
+#### Math.sqrt(n)
+해당 함수는 n의 루트값을 반환한다
+#### Math.abs(n)
+해당 함수는 n의 부호(+,-)를 제외한 값을 반환한다. ex) Math.abs(-10) (dobule) 10
+#### Math.celi(n)
+해당 함수는 n이 소수점일 경우 값을 올림 하여 반환한다.
+ex) Math.celi(3.54) => (double) 4.0
+#### Math.round(n)
+해당 함수는 n의 소수점일 경우 값을 반올림하여 반환한다. 
+ex) Math.round(3.54) => (double) 4.0
+#### Math.floor(n) 
+n의 소수점일 경우 값을 내림하여 반환한다. 
+Math.floor(3.54) (double) 3.0
+#### Math.max(n,m)
+n과 m을 비교하여 최대값을 반환 , Math.max(1,10) (int) 10
+#### Math.substractExact(n, m) 
+n에서 m을 뺀 값을 반환한다 . Math.substractExact(1, 10) (int) -9
+#### Math.floorDiv(n, m) 
+n과 m을 나눈 값을 반환, Math.floorDiv(25, 5) (int) 5
+#### Integer.toString(n,m)
+n의 10진수의 값을 m진법으로 반환 Integer.toString(10,2) (String) 1010
+#### Integer.parseInt(n)
+문자열을 숫자로 변환해주며 부호(+,-)를 포함해서 반환 
+ex) Integer.parseInt("-1234") (int) -1234
+#### Integer.parseInt(n,m)
+n의 n진법의 값을 m의 진법에 따라 10진수로 반환 
+ex) Integer.toString("1010",2) (String) 10 
+
 
  
