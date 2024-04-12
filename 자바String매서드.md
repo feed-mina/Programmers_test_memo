@@ -50,5 +50,16 @@ StringBuilder의 기능은 다음과 같습니다:
 이러한 특성으로 인해 문자열을 동적으로 변경해야 하는 상황에서 
 StringBuilder를 사용하는 것이 유용합니다.
 
+contains는 매개변수로 CharSequence를 받는데 String이 CharSequence를 구현한 클래스이기 때문에 문자열을 변수로 사용해도 된다.
 
 
+```java
+String s="aaaaa";
+System.out.println("a : " + s.contains("a"));
+System.out.println("b : " + s.contains("b"));
+System.out.println("aaaaaaaaaaaaaa : "+ s.contains("aaaaaaaaaaaaaa")); 
+
+```
+a : true
+b: false
+aaaaaaaaaaaaaa : flase
