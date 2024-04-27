@@ -35,6 +35,7 @@ my_string	letter	result
 입출력 예 #2
 
 "BCBdbe" 에서 "B"를 모두 제거한 "Cdbe"를 return합니다.
+ 
  */
 
 

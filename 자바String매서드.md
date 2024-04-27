@@ -7,6 +7,32 @@ getBytes(Charset charset) : 문자열 내에서 주어진 문자열의 위치를
 length() : 총 문자의 수를 리턴
 replace(CharSequence target, CharSequence replacement) : 
 target 부분을 replacement로 대체한 새로운 문자열을 리턴 
+```java
+String a = "무궁화 삼천리 화려강산 대한사람 대한으로 길이 보전하세 ";	
+//replace([기존문자],[바꿀문자])
+a= a.replace("대한", "민국");	
+System.out.println(a);
+
+//결과값 : 무궁화 삼천리 화려강산 민국사람 민국으로 길이 보전하세
+```
+String replace(CharSequnce target, CharSequence replacement)
+
+Replace 함수는 자신이 바꾸고싶은 문자로 문자열을 치환시켜주는 기능을 합니다.
+
+```java
+String a = "무궁화 삼천리 화려강산 대한사람 대한으로 길이 보전하세 ";	
+//replaceAll([정규식],[바꿀문자])
+a= a.replaceAll("대한", "민국");
+System.out.println(a);
+
+//결과값 : 무궁화 삼천리 화려강산 민국사람 민국으로 길이 보전하세
+```
+ReplaceAll 함수는 자신이 바꾸고싶은 문자로 문자열을 전부 치환시켜주는 기능을 합니다. 여기서 많은 분들은 Replace와 ReplaceAll과의 같은 것이 아니냐고 반문을 할 수도 있을 듯합니다. 실제로 나오는 결과물의 값이 같습니다. 하지만 차이점은 분명 있습니다. Replace는 첫 번째 값으로 바꿀 문자열을 입력받는 대신 첫 번째 인자 값으로 정규식이 들어갑니다. 그래서 Replace는 특수문자로도 치환이 되는데 반하여 ReplaceAll은 특수문자로 치환이 어렵습니다.
+
+
+
+
+
 indexOf : 문자열 찾기 
 indexOf( ) 메소드는 if문의 조건식에서 특정 문자열이 포함되어 있는지
  여부에 따라 실행 코드를 달리할 때 자주 사용됩니다. 

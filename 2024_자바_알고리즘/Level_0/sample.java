@@ -12,6 +12,7 @@ public class sample {
 
  
 /**
+ * 다른사람 문제풀이1
  * 
  * 
  */

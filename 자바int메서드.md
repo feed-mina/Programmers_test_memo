@@ -25,27 +25,7 @@ int num = Integer.parseInt(str);
             int i2 = 14;
             int a = Integer.min(i1, i2);
             System.out.println(a); // 9
-```
-####
-
-```java 
-			
-```
-####
-
-```java 
-			
-```
-####
-
-```java 
-			
-```
-####
-
-```java 
-			
-```
+``` 
 #### Math.random()
 해당 함수는 0.0이상 1.0미만의 난수를 반환한다
 #### Math.pow(n,m)
@@ -77,6 +57,24 @@ ex) Integer.parseInt("-1234") (int) -1234
 #### Integer.parseInt(n,m)
 n의 n진법의 값을 m의 진법에 따라 10진수로 반환 
 ex) Integer.toString("1010",2) (String) 10 
-
-
- 
+#### 오름차순 정렬 Arrays.sort(arr)
+```java 
+			int[] arr = {6,3,2,1,5};
+            String[] arr2 = {"h","e","a","c"};
+            Arrays.sort(arr);
+            Arrays.sort(arr2);
+``` 
+#### 내림차순 정렬
+```java 
+    // String
+			 Arrays.sort(arr2, Collections.reserveOrder());
+    // int
+            Integer[] arr3 = Arrays.stream(arr).boxed().toArray(Integer[]::new);
+            Arrays.sort(arr3, Collections.reserveOrder());
+ ``` 
+#### 정렬을 시작하는 위치와 끝 위치를 지정하고 싶을때
+```java 
+  
+Arrays.sort(arr, 1, 3);
+Arrays.sort(arr, 1, 3, Collections.reseveOrder());
+ ``` 
