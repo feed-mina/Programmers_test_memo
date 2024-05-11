@@ -27,7 +27,10 @@ System.out.println(a);
 
 //결과값 : 무궁화 삼천리 화려강산 민국사람 민국으로 길이 보전하세
 ```
-ReplaceAll 함수는 자신이 바꾸고싶은 문자로 문자열을 전부 치환시켜주는 기능을 합니다. 여기서 많은 분들은 Replace와 ReplaceAll과의 같은 것이 아니냐고 반문을 할 수도 있을 듯합니다. 실제로 나오는 결과물의 값이 같습니다. 하지만 차이점은 분명 있습니다. Replace는 첫 번째 값으로 바꿀 문자열을 입력받는 대신 첫 번째 인자 값으로 정규식이 들어갑니다. 그래서 Replace는 특수문자로도 치환이 되는데 반하여 ReplaceAll은 특수문자로 치환이 어렵습니다.
+ReplaceAll 함수는 자신이 바꾸고싶은 문자로 문자열을 전부 치환시켜주는 기능을 합니다. 
+
+Replace는 첫 번째 값으로 바꿀 문자열을 입력받는 대신 첫 번째 인자 값으로 정규식이 들어갑니다. 
+그래서 Replace는 특수문자로도 치환이 되는데 반하여 ReplaceAll은 특수문자로 치환이 어렵습니다.
 
 
 
@@ -39,11 +42,13 @@ indexOf( ) 메소드는 if문의 조건식에서 특정 문자열이 포함되�
  -1 값을 리턴하면 특정 문자열이 포함되어 있지 않다는 뜻입니다.
 
 split() : 문자열을 잘라서 배열로 반환하는 메서드, 파라미터로 자를때 기준이 되는 문자열을 입력받는다.
+```java
 String str = "Hello Java";
 String[] arr = arr.split("");
 System.out.println(Arrays.toString(arr));
-// 출력 결과 : [H, e, l, l, o,  , J, a, v, a]
 
+// 출력 결과 : [H, e, l, l, o,  , J, a, v, a]
+```
 
 substring(int beginIndex) : beginIdex 위치에서 끝까지 
 잘라낸 새로운 문자열을 리턴
@@ -85,7 +90,8 @@ System.out.println("a : " + s.contains("a"));
 System.out.println("b : " + s.contains("b"));
 System.out.println("aaaaaaaaaaaaaa : "+ s.contains("aaaaaaaaaaaaaa")); 
 
-```
 a : true
 b: false
 aaaaaaaaaaaaaa : flase
+
+```

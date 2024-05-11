@@ -1,15 +1,27 @@
 ### Scanner 클래스의 특징
 java.util 패키지에 포함되어 있어 java.util을 import를 해줘야 사용할 수 있다.
+
 기본적인 데이터 타입을 모두 입력받을 수 있다.
+
 토큰(꽁백, 개행, 탭)을 기준으로 데이터를 입력받는다.
 
 Scanner 사용순서
+
+```java
 import java.util.Scanner; 
 import java.util.*;
 
 Scanner sc = new Scanner(System.in) // Scanner 객체 생성
 
-Scanner 객체를 생성한다. 클래스명은 주로 sc로 많이 네이밍한다. new는 새로운 객체를 heap 메모리에 할당하겠다는 의미이다. System.in은 화면에서 입력을 받겠다는 의미이다. System.in은 입력한 값을 Byte 단위로 읽어주는 자바의 표준 입력 스트림이다.
+```
+Scanner 객체를 생성한다.
+
+클래스명은 주로 sc로 많이 네이밍한다.
+
+new는 새로운 객체를 heap 메모리에 할당하겠다는 의미이다.
+System.in은 화면에서 입력을 받겠다는 의미이다.
+
+System.in은 입력한 값을 Byte 단위로 읽어주는 자바의 표준 입력 스트림이다.
 
 String str = sc.next(); // 입력받은 문자열을 str에 저장
 
@@ -19,16 +31,29 @@ Scanner클래스의 메서드
 토큰(Token) : 공백 문자(Spacebar), 탭(Tab), 개행(Enter) 등으로 구분되는 요소
 
 next() : String을 읽음, 토큰(Token)을 기준으로 읽음
+
 nextLine(): String을 읽음, 개행(Enter)을 기준으로 읽음
+
 nextInt(): int를 읽음
+
 nextBoolean(): boolean을 읽음
+
 nextByte() : byte를 읽음
+
 nextShort() : short를 읽음
+
 nextLong() : long을 읽음
+
 nextFloat() : float을 읽음
+
 nextDouble() : double을 읽음
+
 close(): void, Scanner의 사용 종료
-hasNext(): Boolean 현재 입력된 토큰이 있으면 true, 아니면 새로운 입력이 들어올때까지 무한정 기다려서 새로운 입력이 들어오면 그 때 true반환, ctrl + z키가 입력되면 입력끝이므로 false 반환
+
+hasNext(): Boolean 현재 입력된 토큰이 있으면 true, 아니면 새로운 입력이 들어올때까지 무한정 기다려서
+
+새로운 입력이 들어오면 그 때 true반환, ctrl + z키가 입력되면 입력끝이므로 false 반환
+
 hasNextLine() : Boolean 다음에 읽을 값(Line 줄)이 있는지 확인
 
 ```java
@@ -83,10 +108,23 @@ public class Main{
 키보드      ->      스트림(Strean)      ->     프로그램     ->   스트림(Strean)      ->     프린터
 마우스               입력 스트림                                출력스트림                  모니터
 
-이처럼 한 곳에서 다른 곳으로의 데이터 흐름을 스트림이라고 한다. 그리고 스트림은 단방향이기 때문에 입력과 출력이 동시에 발생할 수 없다. 그렇기 때문에 용도에 따라 입력스트림, 출력스트림이 나뉜다.
+이처럼 한 곳에서 다른 곳으로의 데이터 흐름을 스트림이라고 한다. 
 
-System 클래스 in 변수는 '표준 입력 스트림'이며 일반적으로 콘솔, 명령줄 인수 등을 통해 입력을 받을 수 있다.
-키보드로 치거나 터미널 등에서 입력을 넣어주는 것들은 System.in을 통해 연결된다는 의미이다.
+그리고 스트림은 단방향이기 때문에 입력과 출력이 동시에 발생할 수 없다. 
 
-in이라는 변수는 InputStream의 변수로 결국 InputStream 타입의 새 변수를 선언하고 그 변수에 system.in을 할당시킬 수도 있다는 뜻이다. 이렇기 때문에 System.in 과 InputStream을 같이 묶어서 설명하게 된다.
+그렇기 때문에 용도에 따라 입력스트림, 출력스트림이 나뉜다.
+
+System 클래스 in 변수는 '표준 입력 스트림'이며
+
+일반적으로 콘솔, 명령줄 인수 등을 통해 입력을 받을 수 있다.
+
+키보드로 치거나 터미널 등에서 입력을 넣어주는 것들은
+
+System.in을 통해 연결된다는 의미이다.
+
+in이라는 변수는 InputStream의 변수로 결국 InputStream 타입의 새 변수를 선언하고 
+
+그 변수에 system.in을 할당시킬 수도 있다는 뜻이다. 
+
+이렇기 때문에 System.in 과 InputStream을 같이 묶어서 설명하게 된다.
 
