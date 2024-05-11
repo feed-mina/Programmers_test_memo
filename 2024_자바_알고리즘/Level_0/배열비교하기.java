@@ -79,6 +79,9 @@ class Solution {
         int answer = Integer.compare(arr1.length, arr2.length);
 
         if(answer == 0) {
+            // IntStream.of(arr1).sum()은 arr1 배열의 모든 요소의 합을 구한다.
+            // Instream.of(arr2).sum()은 arr2 배열의 모든 요소의 합을 구한다. 
+            // 이 두 합을 비교하여 결과를 다시 answer에 저장한다
             answer = Integer.compare(IntStream.of(arr1).sum(), IntStream.of(arr2).sum());
         }
 
@@ -89,13 +92,20 @@ class Solution {
 다른사람 문제풀이2
 class Solution {
     public int solution(int[] arr1, int[] arr2) {
+        // 만약 arr1의 길이가 arr2의길이보다 짧다면 -1을 반환
         if (arr1.length < arr2.length) return -1;
+        // 만약 arr1의 길이가 arr2의 길이보다 길다면 1을 반환
         else if (arr1.length > arr2.length) return 1;
+        // 두 배열의 길이가 같을 경우 각 배열의 요소들의 합을 걔산하여 비교한다. 
         int arr1Sum = 0, arr2Sum = 0;
         for (int i = 0;i < arr1.length;i++) {
+            // arr1Sum 변수에 arr1의 모든 요소의 합을 저장
             arr1Sum += arr1[i];
+            // arr2Sum 변수에 arr2의 모든 요소의 합을 저장
             arr2Sum += arr2[i];
         }
+        // 두 합의 비교하여 결과를 반환 arr1Sum과 arr2Sum이 같다면 0을 반환, arr1Sum이 arr2Sum 보다 크다면 1을 반환
+        // 그렇지 않으면 -1을 반환
         return arr1Sum == arr2Sum ? 0 : (arr1Sum > arr2Sum ? 1 : -1);
     }
 }

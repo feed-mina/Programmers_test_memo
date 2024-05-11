@@ -52,13 +52,16 @@ import java.util.ArrayList;
 
 class Solution {
     public int[] solution(int n) {
+        // 정수를 저장할 리스트를 생성, 매서드는 정수 'n'을 배개변수로 받는다.
         List<Integer> answer = new ArrayList<>();
         for(int i=1; i<=n; i++){
+            // i가 홀수인지 확인
             if(i % 2 == 1){
                 answer.add(i);
             }
         }
         return answer.stream().mapToInt(x -> x).toArray();
+        // answer.stream().mapToInt(x -> x).toArray()는 리스트를 Instream으로 변환한 후 배열로 변환한다. 
     }
 }
   */
