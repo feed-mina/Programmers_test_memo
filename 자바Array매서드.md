@@ -49,3 +49,24 @@ import java.util.Arrays;
            }} 
  ``` 
 
+#### 오름차순 정렬 Arrays.sort(arr)
+```java 
+			int[] arr = {6,3,2,1,5};
+            String[] arr2 = {"h","e","a","c"};
+            Arrays.sort(arr);
+            Arrays.sort(arr2);
+``` 
+#### 내림차순 정렬
+```java 
+    // String
+			 Arrays.sort(arr2, Collections.reserveOrder());
+    // int
+            Integer[] arr3 = Arrays.stream(arr).boxed().toArray(Integer[]::new);
+            Arrays.sort(arr3, Collections.reserveOrder());
+ ``` 
+#### 정렬을 시작하는 위치와 끝 위치를 지정하고 싶을때
+```java 
+  
+Arrays.sort(arr, 1, 3);
+Arrays.sort(arr, 1, 3, Collections.reseveOrder());
+ ``` 
